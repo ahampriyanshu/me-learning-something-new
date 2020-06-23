@@ -1,4 +1,4 @@
-# [Vidly](https://vidly-movies-django.herokuapp.com/)
+# [Vidly](afternoon-beach-16819.herokuapp.com)
 
 A very small and lightweight django site for movies rental services.
 The site include two apps excluding admin, movie and api.
@@ -12,10 +12,7 @@ The site include two apps excluding admin, movie and api.
 * Tastypie
 * Sqlite3
 
-# Hosted on Heroku
-* https://vidly-movies-django.herokuapp.com/
-
-# How to run
+# How to Deploy
 
 * Install all the required dependencies
 * Run ``python3 manage.py runserver``
