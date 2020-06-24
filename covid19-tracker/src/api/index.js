@@ -9,14 +9,34 @@ export const fetchData = async () => {
         return { confirmed, recovered, deaths, lastUpdate };
 
     }catch(error){
+        console.log("Empty data supplied to cards");
         
     }
 }
 
-export const fetchDailyDate = async () => {
+export const fetchDailyData = async () => {
     try {
      const { data } = await axios.get(`${url}/daily`);   
+
+    const modifiedData = data.map((dailyData) => ({
+        confirmed : dailyData.confirmed.total,
+        deaths: dailyData.deaths.total,
+        date: dailyData.reportDate,
+    }));
+
+    return modifiedData;
+
     } catch (error) {
-        
+        console.log("Empty data supplied to chart");
+    }
+}
+
+export const FetchCountries = async () => {
+    try {
+        const response = await axios.get(`${url}/countries`);  
+
+    return countries.map((country) => country.name);
+    } catch (error) {
+        console.log("Empty data supplied to the country picker");
     }
 }
