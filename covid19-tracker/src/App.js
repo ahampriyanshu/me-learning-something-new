@@ -28,7 +28,7 @@ handleCountryChange = async(country) => {
 
         return (
             <div className={styles.container}>
-                <img className={styles.image} src={logo} />
+                <img className={styles.image} src={logo} alt="Logo of this PWa" />
                 <Cards data={ data }/>
                 <CountryPicker handleCountryChange={this.handleCountryChange} />
                 <Chart data={data} country={country} />

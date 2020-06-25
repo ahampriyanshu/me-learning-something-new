@@ -6,6 +6,18 @@
     margin: 0 2% !important;
 }
 
+.infectedCount{
+    color: rgba(0, 0, 255, 0.8);
+}
+
+.recoveredCount{
+    color: rgba(0, 255, 0, 0.8);
+}
+
+.deathsCount{
+    color: rgba(255, 0, 0, 0.8);
+}
+
 .infected{
     border-bottom: 10px solid rgba(0, 0, 255, 0.5);
 }

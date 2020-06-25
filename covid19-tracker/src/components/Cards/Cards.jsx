@@ -8,6 +8,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
   if (!confirmed) {
     return "Loading...";
   }
+
   return (
     <div className={styles.container}>
       <Grid container spacing={3} justify="center">
@@ -16,7 +17,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography color="textSecondary" gutterBottom>
               Infected
             </Typography>
-            <Typography variant="h5">
+            <Typography variant="h5" className={styles.infectedCount}>
               <Countup
                 start={0}
                 end={confirmed.value}
@@ -37,7 +38,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography color="textSecondary" gutterBottom>
               Recovered
             </Typography>
-            <Typography variant="h5">
+            <Typography variant="h5" className={styles.recoveredCount}>
               <Countup
                 start={0}
                 end={recovered.value}
@@ -58,7 +59,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
             <Typography color="textSecondary" gutterBottom>
               Deaths
             </Typography>
-            <Typography variant="h5">
+            <Typography variant="h5" className={styles.deathsCount} >
               <Countup
                 start={0}
                 end={deaths.value}

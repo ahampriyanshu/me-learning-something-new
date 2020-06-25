@@ -2,6 +2,21 @@ import axios from 'axios';
 
 const url = 'https://covid19.mathdro.id/api';
 
+const newUrl = 'https://api.covid19api.com/summary';
+
+export const newData = async () =>
+{
+    try{
+        const { newdata: { Global } } = await axios.get(newUrl);
+
+        return { Global };
+
+    }catch(error){
+        console.log("New data is empty");
+        
+    } 
+}
+
 export const fetchData = async (country) => {
 
     let changeableUrl = url; 
